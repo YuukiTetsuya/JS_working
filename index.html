@@ -7,7 +7,14 @@
   <body>
     <h1>test</h1>
     <script type="text/javascript">
-    document.write('1年は'+(365*24)+'時間です');
+    var now = new Date();
+    var hour = now.getHours();
+
+    if(hour < 12){
+      window.alert('現在は午前'+(hour)+'時です');
+    }else{
+      window.alert('現在は午後'+(hour)+'時です');
+    }
     </script>
   </body>
 </html>
