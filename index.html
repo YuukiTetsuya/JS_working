@@ -7,11 +7,15 @@
   <body>
     <h1>test</h1>
     <script type="text/javascript">
-    if(confirm('どちらを選びますか？')){
-      alert('保存したね');}
-      else{
-        alert('保存できなかったね');
-      }
+    // 問題文
+    var yesOrNo = confirm('1月は別名「睦月」。同じように6月は「文月」である。(〇:OK/×:キャンセル)');
+
+    // 解答
+    if(yesOrNo){
+      alert('はずれ！　正解は水無月');
+    }else{
+      alert('正解！');
+    }
     </script>
   </body>
 </html>
