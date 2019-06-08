@@ -7,24 +7,17 @@
   <body>
     <h1>test</h1>
     <script type="text/javascript">
-    var now = new Date();
-    var hour = now.getHours();
-    var minitue = now.getMinutes();
-    var second = now.getSeconds();
-    var price = '';
-    var count = '';
-    count = (count === '') ? 0 : count;
-    price = (price === '') ? 0 : price;
+      var date = new Date();
+      var hour = now.getHours();
+      var minutes = now.getMinutes();
+      var second = now.getSeconds();
+      document.write(hour);
 
-    document.write(count);
-    document.write('<br>')
-    document.write('現在の値は'+(price)+'です');
-
-    if((hour === 14 || hour === 16) && minute === 0 && second === 0){
-      window.alert('現在は14時丁度です');
-    }else{
-      window.alert('現在は午後'+(hour - 12)+'時'+(minitue)+'分'+(second)+'秒です');
-    }
+      if((hour === 9 && minutes === 30 && second === 00) || (hour === 10 && minutes === 00 && second === 45)){
+        alert('起きる時間です');
+      }else{
+        alert('まだ寝てていいよ');
+      }
 
     </script>
   </body>
