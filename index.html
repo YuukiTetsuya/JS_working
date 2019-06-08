@@ -9,11 +9,13 @@
     <script type="text/javascript">
     var now = new Date();
     var hour = now.getHours();
+    var minitue = now.getMinutes();
+    var second = now.getSeconds();
 
-    if(hour < 12){
-      window.alert('現在は午前'+(hour)+'時です');
+    if(hour === 14 && minute === 0 && secound == 0){
+      window.alert('現在は14時丁度です');
     }else{
-      window.alert('現在は午後'+(hour - 12)+'時です');
+      window.alert('現在は午後'+(hour - 12)+'時'+(minitue)+'分'+(second)+'秒です');
     }
     </script>
   </body>
