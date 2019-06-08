@@ -12,7 +12,7 @@
     var minitue = now.getMinutes();
     var second = now.getSeconds();
 
-    if(hour === 14 && minute === 0 && secound == 0){
+    if(hour === 14 || hour === 16 && minute === 0 && second === 0){
       window.alert('現在は14時丁度です');
     }else{
       window.alert('現在は午後'+(hour - 12)+'時'+(minitue)+'分'+(second)+'秒です');
