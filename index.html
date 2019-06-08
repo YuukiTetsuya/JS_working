@@ -6,14 +6,15 @@
   </head>
   <body>
     <h1>test</h1>
+
     <script type="text/javascript">
     var now = new Date();
     var hour = now.getHours();
 
-    if(hour < 12){
-      window.alert('現在は午前'+(hour)+'時です');
+    if(hour === 14 || hour === 16){
+      window.alert('タイムセール中です');
     }else{
-      window.alert('現在は午後'+(hour - 12)+'時です');
+      window.alert('タイムセールは終わりました');
     }
     </script>
   </body>
