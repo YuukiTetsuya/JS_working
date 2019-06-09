@@ -6,17 +6,10 @@
   </head>
   <body>
     <h2>メインメニュー</h2>
-    <script type="text/javascript">
-      var menus = {
-        'home.html': 'ホーム',
-        'company.html': '会社情報',
-        'product.html': '製品情報',
-        'contact.html': 'お問合せ'
-      }
-      for(var m in menus){
-        // 連想配列のキーを変数mに代入
-        document.write('<li><a href="' + m + '"　title="' + m + 'に移動します">' + menus[m] + '</a></li>');
-      }
-    </script>
+    <p class="btn">
+      <!--  onclickはHTMLのタグの中でJavaScript構文を埋め込める属性の一つ -->
+      <!-- closeはwindowオブジェクトに属するポップアップを閉じるメソッド -->
+      <input type="button" name="btn" value="とじる" onclick="if(confirm('閉じてもよろしいですか？')){window.close(); }else{window.alert('閉じてね')}">
+    </p>
   </body>
 </html>
