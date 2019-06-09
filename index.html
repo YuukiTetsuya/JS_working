@@ -6,14 +6,12 @@
   </head>
   <body>
     <h1>アベックキャンディー</h1>
-      <select name="abeccandy">
-        <script type="text/javascript">
-          var i = 2;
-          while(i <= 20){
-            document.write('<option value="' + i +'">' + i + '歳</option>');
-            i += 2;
-          }
-        </script>
-      </select>
+    <select name="age">
+      <script type="text/javascript">
+        for(var i = 2; i <= 20; i += 2){
+          document.write('<option value="' + i + '">' + i + '歳</option>');
+        }
+      </script>
+    </select>
   </body>
 </html>
