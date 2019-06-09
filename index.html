@@ -3,19 +3,12 @@
   <head>
     <meta charset="utf-8">
     <title>test</title>
+    <link rel="stylesheet" href="styles.css">
   </head>
   <body>
     <h2>メインメニュー</h2>
     <input id="btnClose" type="button" name="btn" value="閉じる">
-    <script type="text/javascript">
-      document.getElementById('btnClose').onclick = function(){
-        if(confirm('閉じてよろしいでしょうか？')){
-          close();
-        }else{
-          if(confirm('本当にいいんですか？')){
-          alert('閉じるのを中止しました');
-        }}
-      }
-    </script>
+    <!-- ボタン操作時のファイルを読み出し -->
+    <script type="text/javascript" src="index.js"></script>
   </body>
 </html>
