@@ -6,10 +6,16 @@
   </head>
   <body>
     <h2>メインメニュー</h2>
-    <p class="btn">
-      <!--  onclickはHTMLのタグの中でJavaScript構文を埋め込める属性の一つ -->
-      <!-- closeはwindowオブジェクトに属するポップアップを閉じるメソッド -->
-      <input type="button" name="btn" value="とじる" onclick="if(confirm('閉じてもよろしいですか？')){window.close(); }else{window.alert('閉じてね')}">
-    </p>
+    <input id="btnClose" type="button" name="btn" value="閉じる">
+    <script type="text/javascript">
+      document.getElementById('btnClose').onclick = function(){
+        if(confirm('閉じてよろしいでしょうか？')){
+          close();
+        }else{
+          if(confirm('本当にいいんですか？')){
+          alert('閉じるのを中止しました');
+        }}
+      }
+    </script>
   </body>
 </html>
