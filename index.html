@@ -5,18 +5,15 @@
     <title>test</title>
   </head>
   <body>
-    <h1>test</h1>
-    <script type="text/javascript">
-    var date = new Date();
-    var hour = date.getHours();
-    var minutes = date.getMinutes();
-    var second = date.getSeconds();
-
-    if((hour === 9 && minutes === 30 && second === 00) || (hour === 10 && minutes === 00 && second === 45)){
-      alert('起きる時間ですね');
-    }else{
-      alert('まだ寝てていいよ');
-    }
-    </script>
+    <h1>アベックキャンディー</h1>
+      <select name="abeccandy">
+        <script type="text/javascript">
+          var i = 2;
+          while(i <= 20){
+            document.write('<option value="' + i +'">' + i + '歳</option>');
+            i += 2;
+          }
+        </script>
+      </select>
   </body>
 </html>
