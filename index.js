@@ -4,6 +4,7 @@ function numberFormat(source){
   var s = new String(source);
   var ret = '';
 
+// iに文字数から3引いた数をいれて、substrで3桁ずつ.を付加している
   for(var i = s.length-3; i > 0; i -= 3){
     ret = '.' + s.substr(i, 3) + ret;
   }
