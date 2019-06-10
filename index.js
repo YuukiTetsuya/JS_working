@@ -1,34 +1,19 @@
-// 選択時の挙動
-document.getElementById('age').onchange = function(){
-  var age = document.getElementById('age').value;
+// 数字を3桁ずつカンマ区切りにするメソッド
 
-// switchを使った条件式
-  switch(age){
-    case '10':
-      alert('10歳以下の方は、半額です');
-      break;
-    case '30':
-      alert('11-30歳の方は割引はありません');
-      break;
-    case '50':
-      alert('31-50歳の方は割引はありません');
-      break;
-    case '51':
-      alert('51歳以上の方は30%の割引です');
-      break;
+function numberFormat(source){
+  var s = new String(source);
+  var ret = '';
+
+  for(var i = s.length-3; i > 0; i -= 3){
+    ret = '.' + s.substr(i, 3) + ret;
   }
+  ret = s.substr(0, i+3) + ret;
 
-// if-elseifを使った条件式
-  // if(age === '10'){
-  //   alert('10歳以下の方は、半額です');
-  // } else if
-  //   (age === '30'){
-  //   alert('11-30歳の方は割引はありません');
-  // } else if
-  //   (age === '50'){
-  //   alert('31-50歳の方は割引はありません');
-  // } else if
-  //   (age === '51'){
-  //   alert('51歳以上の方は30%の割引です');
-  // }
+  return ret;
 }
+
+var sumPrice = numberFormat(500000*5);
+var humanYen = numberFormat(2000*5);
+
+document.write('合計金額は' + sumPrice + '円です<br>');
+document.write('あなたの価値は' + humanYen + '円です<br>');
