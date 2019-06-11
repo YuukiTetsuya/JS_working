@@ -27,13 +27,3 @@ thisPrice.tax = 5;
 thisPrice.addTax();
 // 税込み価格を表示
 document.write(thisPrice.format());
-
-// // オブジェクトを生成(大文字で定義する)
-// var Price = function(){
-//   }
-// // メソッドの作成
-// var this.メソッド名 = function(){
-// }
-
-// // オブジェクトを利用
-// var thisPrice = new Price();
