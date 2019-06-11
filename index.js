@@ -1,20 +1,39 @@
-// 数字を3桁ずつカンマ区切りにするメソッド
-
-function numberFormat(source){
-  var s = new String(source);
-  var ret = '';
-
-// iに文字数から3引いた数をいれて、substrで3桁ずつ.を付加している
-  for(var i = s.length-3; i > 0; i -= 3){
-    ret = '.' + s.substr(i, 3) + ret;
+// オブジェクトを利用時に初期値を設定
+var Price = function(price){
+  // プロパティを生成
+  this.tax;
+  this.price = price;
+  // 消費税込みの値段
+  this.addTax = function(){
+    this.price += Math.round(this.price * this.tax / 100);
+  };
+  // 3桁ずつ.を区切るメソッド
+  this.format = function(){
+    var s = new String(this.price);
+    var ret = '';
+    for(var i = s.length-3; i > 0; i -= 3){
+      ret = '.' + s.substr(i, 3) + ret;
+    }
+    ret = s.substr(0, i+3) + ret;
+    return ret;
   }
-  ret = s.substr(0, i+3) + ret;
-
-  return ret;
 }
 
-var sumPrice = numberFormat(500000*5);
-var humanYen = numberFormat(2000*5);
+// オブジェクトをコンストラクタで生成する
+var thisPrice = new Price(1280);
+// 消費税を5％に設定
+thisPrice.tax = 5;
+// 消費税込みの価格を呼び出し
+thisPrice.addTax();
+// 税込み価格を表示
+document.write(thisPrice.format());
 
-document.write('合計金額は' + sumPrice + '円です<br>');
-document.write('あなたの価値は' + humanYen + '円です<br>');
+// // オブジェクトを生成(大文字で定義する)
+// var Price = function(){
+//   }
+// // メソッドの作成
+// var this.メソッド名 = function(){
+// }
+
+// // オブジェクトを利用
+// var thisPrice = new Price();
