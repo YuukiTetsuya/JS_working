@@ -1,3 +1,10 @@
+var name = 'javaScrip';
+if(name === 'JavaScript'){
+  window.alert('JavaScriptが選ばれました');
+}else if (name === 'PHP') {
+  window.alert('PHPが選ばれました');
+}
+
 // オブジェクトを利用時に初期値を設定
 var Price = function(price){
   // プロパティを生成
