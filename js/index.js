@@ -1,4 +1,4 @@
-var name = 'javaScrip';
+var name = 'javaScript';
 if(name === 'JavaScript'){
   window.alert('JavaScriptが選ばれました');
 }else if (name === 'PHP') {
