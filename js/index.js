@@ -25,12 +25,12 @@
 //     return ret;
 //   }
 // }
-//
-// // オブジェクトをコンストラクタで生成する
-// var thisPrice = new Price(1280);
-// // 消費税を5％に設定
-// thisPrice.tax = 5;
-// // 消費税込みの価格を呼び出し
-// thisPrice.addTax();
-// // 税込み価格を表示
-// document.write(thisPrice.format());
+
+// オブジェクトをコンストラクタで生成する
+var thisPrice = new Price(1280);
+// 消費税を5％に設定
+thisPrice.tax = 5;
+// 消費税込みの価格を呼び出し
+thisPrice.addTax();
+// 税込み価格を表示
+document.write(thisPrice.format());

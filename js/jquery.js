@@ -1,14 +1,6 @@
-// toolTitleをクリック時のdisplayを表示非表示に設定
-
-$('#toolTitle ').bind('click', function(){
-  $('#toolContent').slideToggle();
-  $('#toolContent :last').html('こんにちは');
+// hoverとthisとattrを用いて、マウスが振れた/離れたときにsrc属性の属性値を_off/_onに切り替える
+$('nav img').hover(function(){
+  $(this).attr('src', $(this).attr('src').replace('_off', '_on'));
+}, function(){
+  $(this).attr('src', $(this).attr('src').replace('_on', '_off'));
 });
-
-// $('#toolTitle').bind('click', function(){
-//   if($('#toolContent').css('display') !== 'none'){
-//     $('#toolContent').slideUp();
-//   }else{
-//     $('#toolContent').slideDown();
-//   }
-// });
