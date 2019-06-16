@@ -1,8 +1,8 @@
-// nav imgセレクタに対して、attrでsrcを限定して内容をon/offに変化される
+// nav imgセレクタに対してマウスが触れた時にattrで指定した内容のgifに変化する
 $('nav img')
 .bind('mouseenter', function(){
-  $('nav img').attr('src', 'img/btn_company_on.gif');
+  $(this).attr('src', 'img/btn_company_on.gif');
 })
 .bind('mouseleave', function(){
-  $('nav img').attr('src', 'img/btn_company_off.gif');
+  $(this).attr('src', 'img/btn_company_off.gif');
 });
