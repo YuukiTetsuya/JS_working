@@ -1,7 +1,7 @@
 //プリロード処理(下記画像をあらかじめ読み込む)
-$('<img>').attr('src', 'img/btn_company_on.gif');
-$('<img>').attr('src', 'img/btn_product_on.gif');
-$('<img>').attr('src', 'img/btn_product_on.gif');
+$('ul img').each(function(){
+  $('<img>').attr('src', $(this).attr('src').replace('_off', '_on'));
+});
 
 // hoverとthisとattrを用いて、マウスが振れた/離れたときにsrc属性の属性値を_off/_onに切り替える
 $('nav img').hover(function(){
