@@ -1,2 +1,4 @@
-// displayプロパティを調整し、jQueryで表示する
-$('#toolContent').show();
+// id:toolTitleをクリックした時、toolContentを表示する
+$('#toolTitle').bind('click', function(){
+  $('#toolContent').show();
+});
