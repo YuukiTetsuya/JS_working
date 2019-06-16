@@ -1,11 +1,9 @@
-// 各スライド文字を初期状態/クリック時に非表示にし、セレクタがクリックされたときのみ
-// 各セレクタをスライドダウンさせる
+// toolTitleをクリック時のdisplayを表示非表示に設定
 
-// thisを用いた省略コード
-
-$('.toolContent').hide();
-
-$('.toolTitle a').bind('click', function(){
-  $('.toolContent:visible').slideUp();
-  $($(this).attr('href')).slideDown();
+$('#toolTitle').bind('click', function(){
+  if($('#toolContent').css('display') !== 'none'){
+    $('#toolContent').slideUp();
+  }else{
+    $('#toolContent').slideDown();
+  }
 });
