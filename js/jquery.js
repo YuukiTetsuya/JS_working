@@ -1,4 +1,4 @@
 // id:toolTitleをクリックした時、toolContentを表示する
-$('#toolTitle').bind('click', function(){
+$('#toolTitle').click(function(){
   $('#toolContent').show();
 });
