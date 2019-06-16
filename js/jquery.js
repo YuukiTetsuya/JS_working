@@ -4,4 +4,4 @@ $('nav img').bind('mouseenter', function(){
 });
 $('nav img').bind('mouseleave', function(){
   $('nav img').attr('src', 'img/btn_company_off.gif');
-})
+});
