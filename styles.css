@@ -1,9 +1,9 @@
-img {
-  width: 200px;
-  height: 180px;
-}
-
 #toolTitle a {
   background-color: black;
   color: white;
+}
+
+#largeImg {
+  display: none;
+  border: 1px solid #fff;
 }
