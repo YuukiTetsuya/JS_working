@@ -3,6 +3,9 @@ H_JS_working
 
 JS_workingはYUUKIのJavaScript勉強履歴です。
 
+## デプロイサイト
+https://jsworkingyuuki.herokuapp.com/
+
 ## Description
 
 - 一区切りついたらmasterにpush。進捗はdevelopにpush
