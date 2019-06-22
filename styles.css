@@ -46,3 +46,17 @@ input[class="error"] {
 .error {
   color: red;
 }
+
+#largeImg {
+  display: none;
+  border: 1px solid #fff;
+}
+
+#cover {
+  /* 半透明で塗りつぶす */
+  background: rgba(0,0,0,0.5);
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
