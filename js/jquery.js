@@ -1,3 +1,25 @@
+// stopメソッドで第一パラメータでtrueなら以降のキューを削除する。falseなら現時点で実行中のキューだけ削除する
+// 第二パラメータで要素をその場で止める場合はfalse、止めない場合はtrue
+$('#news').bind('click', function(){
+  $(this).stop(true, false).fadeOut('slow');
+});
+
+// ainmateメソッドチェーンでは、FIFOでパラメータが格納されているので、格納した順に取り出す
+// delayで3秒止めてフォードアウトする
+$('#news')
+  .css({
+    'top':  '-100px'
+  })
+  .animate({
+    'top':  '70px'
+  }, 1000)
+  .animate({
+    'top':  '60px'
+  }, 500)
+  .delay(3000)
+  .fadeOut('8');
+
+
 // input要素のname属性値からフォーカスが外れた時に未記入である場合、
 $('input[name=myname]')
 .bind('blur', function(){
