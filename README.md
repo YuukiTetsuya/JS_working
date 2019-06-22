@@ -3,7 +3,7 @@ H_JS_working
 
 JS_workingはYUUKIのJavaScript勉強履歴です。
 
-## デプロイサイト
+## デプロイ
 https://jsworkingyuuki.herokuapp.com/
 
 ## Description
