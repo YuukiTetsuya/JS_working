@@ -15,8 +15,9 @@ $('.gallery a').bind('click', function(e){
     'top':      $(window).scrollTop() + 30 + 'px'
   })
 　// クリックした大画像のURLを、クリックした自身のsrc属性に変換
-$('#largeImg img').attr('src', $(this).attr('href'));
-$('#largeImg').fadeIn('slow');
+  // find-endで#largeImg要素内のimg要素のsrc属性を変換
+.find('img').attr('src', $(this).attr('href')).end()
+.fadeIn('slow');
 });
 
 // 暗幕,画像をクリック時に暗幕と画像をフェードアウトする
