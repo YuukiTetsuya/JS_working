@@ -1,4 +1,6 @@
-// input要素のname属性値がmynameをセレクタし、他のコントロールにフォーカスが移ったとき、値を取得する
+// input要素のname属性値が未記入である場合、コントロールをログする
 $('input[name=myname]').bind('blur', function(){
-  console.log($(this).val());
+  if($(this).val() == ""){
+  console.log('未記入です')
+};
 });
