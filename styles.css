@@ -13,3 +13,7 @@ body {
   color: white;
   border-radius: 5px;
 }
+
+.error {
+  color: red;
+}
