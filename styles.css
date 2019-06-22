@@ -1,5 +1,17 @@
 body {
   font-size: 17px;
+  font-style: normal;
+  margin: auto;
+}
+
+.container {
+  text-align: center;
+}
+
+h1 {
+  margin-top: 0;
+  border-bottom: 1px solid gray;
+  box-shadow: 0px 4px 3px -3px #404040;
 }
 
 #nameform {
@@ -14,6 +26,14 @@ body {
   border-radius: 5px;
 }
 
-.error {
+dd {
+  margin-right: 30px;
+}
+
+input[class="error"] {
+  background-color: #fcc;
+}
+
+#error {
   color: red;
 }
