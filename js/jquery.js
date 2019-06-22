@@ -3,8 +3,9 @@ $('.gallery a').bind('click', function(e){
   $('#largeImg')
   .css({
     'position': 'absolute',
-    'left':     '0',
-    'top':      '0'
+    // 画面の中央を求める
+    'left':     Math.floor(($(window.).width() - 400) / 2) + 'px',
+    'top':      $(window).scrollTop() + 30 + 'px'
   })
 .show();
 });
