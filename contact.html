@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>お問合せ</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="js\jquery-3.4.1.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+    <h1>お問合せ</h1>
+      <form action="" method="post">
+        <dl>
+          <dt id="nameform">お名前<span class="require">必須</span></dt>
+          <dd><input name="myname" type="text" size="35"></dd>
+          <dt>性別<span class="require">必須</span></dt>
+          <dd>
+            <label><input type="radio" name="gender" value="男性">男性</label>
+            <label><input type="radio" name="gender" value="女性">女性</label>
+          </dd>
+          <dt>年齢</dt>
+          <dd><input type="text" name="age" size="10"></dd>
+        </dl>
+        <button type="submit" name="button" value="送信">送信</button>
+      </form>
+    <script type="text/javascript" src="js/jquery.js"></script>
+    </div>
+  </body>
+</html>
