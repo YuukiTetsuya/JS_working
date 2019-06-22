@@ -1,11 +1,7 @@
-//プリロード処理(下記画像をあらかじめ読み込む)
-$('ul img').each(function(){
-  $('<img>').attr('src', $(this).attr('src').replace('_off', '_on'));
-});
-
-// hoverとthisとattrを用いて、マウスが振れた/離れたときにsrc属性の属性値を_off/_onに切り替える
-$('nav img').hover(function(){
-  $(this).attr('src', $(this).attr('src').replace('_off', '_on'));
-}, function(){
-  $(this).attr('src', $(this).attr('src').replace('_on', '_off'));
+// input要素のname属性値からフォーカスが外れた時に未記入である場合、
+$('input[name=myname]').bind('blur', function(){
+  if($(this).val() === ''){
+    // inputの親要素ddの中にappendでpタグを追加
+  $(this).parent().append('<p class="error">&#x26a0;この項目は必ずご記入ください</p>');
+}
 });

@@ -1,9 +1,19 @@
-img {
-  width: 200px;
-  height: 180px;
+body {
+  font-size: 17px;
 }
 
-#toolTitle a {
-  background-color: black;
+#nameform {
+  margin-bottom: 20px;
+}
+
+.require {
+  margin-left: 10px;
+  background-color: red;
+  padding: 2px;
   color: white;
+  border-radius: 5px;
+}
+
+.error {
+  color: red;
 }
