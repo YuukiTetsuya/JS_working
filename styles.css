@@ -1,13 +1,15 @@
-#largeImg {
-  display: none;
-  border: 1px solid #fff;
+body {
+  font-size: 17px;
 }
 
-#cover {
-  /* 半透明で塗りつぶす */
-  background: rgba(0,0,0,0.5);
-  display: none;
-  position: absolute;
-  left: 0;
-  top: 0;
+#nameform {
+  margin-bottom: 20px;
+}
+
+.require {
+  margin-left: 10px;
+  background-color: red;
+  padding: 2px;
+  color: white;
+  border-radius: 5px;
 }
