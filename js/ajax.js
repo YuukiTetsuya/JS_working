@@ -1,5 +1,5 @@
 $.ajax({
-  url: './news.html',
+  url: 'http://h2o-space.com/news.html',
   dataType: 'html',
   async:    true,
   success:  function(html){
