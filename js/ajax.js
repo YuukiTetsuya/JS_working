@@ -1,13 +1,13 @@
 $.ajax({
-    url:  'rss.xml',
-    dataType: 'xml',
+    url:  'news.json',
+    dataType: 'json',
     async:    true,
     success:  function(xml){
       var html = '';
-      $(xml).find('channel item').each(function(){
-        html += '<li><a href="' + $(this).find('link').text() +
-        '">' + $(this).find('title').text() + '</a></li>';
-      });
+      for(i in json){
+        html += '<li><a href="' + json[i].link + '">' + json[i].
+        title + '</a></li>';
+      }
       $('#news').html('<ul>' + html + '</ul>');
     },
     error:  function(html){
