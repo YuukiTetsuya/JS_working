@@ -10,7 +10,7 @@ ul {
 }
 
 main {
-  background: pink;
+  margin-bottom: 8px;
 }
 
 main img {
@@ -19,9 +19,52 @@ main img {
   vertical-align:  bottom;
 }
 
+nav {
+  margin-bottom: 8px;
+}
+
+nav ul {
+  display: flex;
+  justify-content: space-between;
+}
+
 nav li {
   width: 60px;
   border: 1px solid #dedede;
+  border-radius: 4px;
+  font-size: 12px;
+  padding: 4px;
+  text-align: center;
+  cursor: pointer;
+  user-select: none;
+}
+
+nav li:hover {
+  background: #f8f8f8;
+}
+
+#play {
+  width: 140px;
+}
+
+.thumbnails {
+  /* グリッドレイアウトを作成 */
+  display: grid;
+  grid-template-columns: repeat(5, 56px);
+  gap: 5px;
+}
+
+.thumbnails li {
+  cursor: pointer;
+  opacity: 0.6;
+}
+
+.thumbnails li:hover {
+  opacity: 1;
+}
+
+.thumbnails li.current {
+  opacity: 1;
 }
 
 .thumbnails img {
