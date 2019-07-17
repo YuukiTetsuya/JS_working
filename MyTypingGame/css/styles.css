@@ -12,3 +12,7 @@ body {
 .info {
   color: #ccc;
 }
+
+footer {
+  text-align: left; 
+}
