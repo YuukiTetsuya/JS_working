@@ -80,5 +80,45 @@
     }
     addCurrentClass();
     setMainImage(images[currentNum]);
-  })
+  });
+
+  // 戻るボタン押した時に、clickイベントで現在の要素番号を--し、main画像として番号をセットする
+  const prev = document.getElementById('prev');
+  prev.addEventListener('click', () => {
+    removeCurrentClass();
+    currentNum--;
+    // 現在の画像番号が0より小さいのであれば、現在番号を画像番号から1引いた数にする
+    if(currentNum < 0){
+      currentNum = images.length - 1;
+    }
+    addCurrentClass();
+    setMainImage(images[currentNum]);
+  });
+
+let timeoutId;
+
+  function playSlideshow() {
+    timeoutId = setTimeout(() => {
+    next.click();
+    playSlideshow();
+    }, 1000);
+  }
+
+  // playボタン押下時に、playSlideshowを呼び出す
+  const play = document.getElementById('play');
+  const pause = document.getElementById('pause');
+
+  // playボタン押下時に、hiddenクラスをつけてPlayボタンを隠し、pauseからhiddenをremoveして表示する
+  play.addEventListener('click', () => {
+    play.classList.add('hidden');
+    pause.classList.remove('hidden');
+    playSlideshow();
+  });
+
+  // 停止ボタン押下時に、hiddenクラスをremoveしてPlayボタンを表示し、pauseからhiddenをaddして隠す
+  pause.addEventListener('click', () => {
+    play.classList.remove('hidden');
+    pause.classList.add('hidden');
+    clearTimeout(timeoutId);
+  });
 }
